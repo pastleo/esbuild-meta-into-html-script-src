@@ -1,6 +1,6 @@
 {
   "name": "esbuild-meta-into-html-script-src",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -10,9 +10,13 @@
   "bin": {
     "esbuild-meta-into-html-script-src": "./index.js"
   },
-  "keywords": [],
+  "keywords": ["esbuild"],
   "author": "PastLeo",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pastleo/esbuild-meta-into-html-script-src"
+  },
   "dependencies": {
     "jsdom": "^18.0.0"
   }
