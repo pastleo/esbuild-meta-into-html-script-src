@@ -1,0 +1,19 @@
+{
+  "name": "esbuild-meta-into-html-script-src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "esbuild-meta-into-html-script-src": "./index.js"
+  },
+  "keywords": [],
+  "author": "PastLeo",
+  "license": "MIT",
+  "dependencies": {
+    "jsdom": "^18.0.0"
+  }
+}
