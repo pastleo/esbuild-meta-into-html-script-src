@@ -35,3 +35,11 @@ become:
 ```sh
 esbuild-meta-into-html-script-src meta.json src/index.html dist/index.html src/ dist/
 ```
+
+## Get entryPointMapping from generated html
+
+```javascript
+window.ENTRY_POINTS_MAPPING = typeof window !== 'undefined' ? JSON.parse(
+  document.head.querySelector('meta[name=entry-points-mapping]')?.content || '{}'
+) : {}
+```

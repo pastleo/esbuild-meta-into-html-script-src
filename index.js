@@ -35,10 +35,14 @@ async function main(metaJsonPath, srcHtmlPath, desHtmlPath, srcPrefix = '', desP
     )
   );
 
-  const scripts = html.window.document.scripts;
-
   console.log('entryPointMapping:', entryPointMapping);
 
+  const metaTag = html.window.document.createElement('meta');
+  metaTag.name = 'entry-points-mapping';
+  metaTag.content = JSON.stringify(entryPointMapping);
+  html.window.document.head.appendChild(metaTag);
+
+  const scripts = html.window.document.scripts;
   for(let i = 0; i < scripts.length; i++) {
     const script = scripts.item(i);
     const matchedEntryPoint = entryPointMapping[script.src];
